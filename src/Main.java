@@ -60,23 +60,23 @@ public class Main {
             String s = scanner.nextLine();
             if (s.equals("exit")) break;
             else if (s.equals("replay")) {
-                System.out.println("Заново");
+                System.out.println("Заново.");
                 board = buildBoard();
                 board.printBoard();
             } else {
                 if (s.equals("castling0")) {
                     if (board.castling0()) {
-                        System.out.println("Рокировка удалась");
+                        System.out.println("Рокировка удалась.");
                         board.printBoard();
                     } else {
-                        System.out.println("Рокировка не удалась");
+                        System.out.println("Рокировка не удалась.");
                     }
                 } else if (s.equals("castling7")) {
                     if (board.castling7()) {
-                        System.out.println("Рокировка удалась");
+                        System.out.println("Рокировка удалась.");
                         board.printBoard();
                     } else {
-                        System.out.println("Рокировка не удалась");
+                        System.out.println("Рокировка не удалась.");
                     }
                 } else if (s.contains("move")) {
                     String[] a = s.split(" ");
@@ -86,11 +86,11 @@ public class Main {
                         int toLine = Integer.parseInt(a[3]);
                         int toColumn = Integer.parseInt(a[4]);
                         if (board.moveToPosition(line, column, toLine, toColumn)) {
-                            System.out.println("Успешно передвинулись");
+                            System.out.println("Успешно передвинулись.");
                             board.printBoard();
-                        } else System.out.println("Передвижение не удалось");
+                        } else System.out.println("Передвижение не удалось.");
                     } catch (Exception e) {
-                        System.out.println("Вы что-то ввели не так, попробуйте ещё раз");
+                        System.out.println("Вы что-то ввели не так, попробуйте ещё раз.");
                     }
 
                 }

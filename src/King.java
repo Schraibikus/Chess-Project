@@ -16,7 +16,7 @@ public class King extends ChessPiece{
         int kingMoveX = Math.abs(line-toLine);
         int kingMoveY = Math.abs(column-toColumn);
 
-        if (kingMoveX <= 1 &&  kingMoveY <= 1) return true;
+        if (kingMoveX <= 1 && kingMoveY <= 1) return true;
         else return false;
     }
     @Override

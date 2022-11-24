@@ -16,8 +16,7 @@ public class Rook extends ChessPiece{
         int rookMoveX = Math.abs(line-toLine);
         int rookMoveY = Math.abs(column-toColumn);
 
-        if (rookMoveX <= 7 &&  toColumn == column) return true;
-        if (rookMoveY <= 7 && toLine == line) return true;
+        if (rookMoveX <= 7 &&  toColumn == column ||toLine == line) return true;
         else return false;
     }
     @Override

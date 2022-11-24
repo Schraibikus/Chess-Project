@@ -17,8 +17,7 @@ public class Queen extends ChessPiece{
         int queenMoveY = Math.abs(column-toColumn);
 
         if (queenMoveX == queenMoveY) return true;
-        if (queenMoveX <= 7 &&  toColumn == column) return true;
-        if (queenMoveY <= 7 && toLine == line) return true;
+        if (queenMoveX <= 7 && toColumn == column || toLine == line) return true;
         else return false;
     }
     @Override
